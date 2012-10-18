@@ -1,0 +1,29 @@
+{
+  "name": "Its Alot!",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "The Alot is Better Than You at Everything.",
+  "icons": {
+    "48": "images/alot.48.png",
+    "128": "images/alot.128.png"
+  },
+  "browser_action": {
+    "default_icon": "images/alot.48.png",
+    "default_popup": "popup.html", 
+    "default_title": "The Alot is Still Better Than You at Everything."
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "css": ["content/alot.css"],
+      "js": [
+        "content/jquery.js",
+        "content/jquery.replacetext.js",
+        "content/alot.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "images/alot.png"
+  ]
+}
